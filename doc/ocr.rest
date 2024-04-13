@@ -1,4 +1,5 @@
 @host = http://localhost:5000
+@img_path = ./doc/img/factura
 
 ### Request to OCR API
 POST {{host}}/api/ocr
@@ -20,5 +21,17 @@ Content-Type: multipart/form-data; boundary=MyBoundary
 Content-Disposition: form-data; name="file"; filename="sample_image.jpg"
 Content-Type: image/jpeg
 
-< ./doc/factura1.jpg
+< {{img_path}}5.jpg
+--MyBoundary--
+
+
+### Request to auto_correct_perspective API
+POST {{host}}/api/auto_correct_perspective
+Content-Type: multipart/form-data; boundary=MyBoundary
+
+--MyBoundary
+Content-Disposition: form-data; name="file"; filename="sample_image.jpg"
+Content-Type: image/jpeg
+
+< ./doc/factura2.jpg
 --MyBoundary--

@@ -1,0 +1,12 @@
+@host = http://localhost:5000
+
+### Request to OCR API
+POST {{host}}/api/ocr
+Content-Type: multipart/form-data; boundary=MyBoundary
+
+--MyBoundary
+Content-Disposition: form-data; name="file"; filename="sample_image.jpg"
+Content-Type: image/jpeg
+
+< ./doc/factura1.jpg
+--MyBoundary--

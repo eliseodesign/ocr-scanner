@@ -2,8 +2,8 @@
 FROM python:3.8-slim
 
 # Instala Tesseract-OCR
-RUN apt-get update && apt-get install -y tesseract-ocr \
-    && apt-get clean
+RUN apt-get update && apt-get install -y tesseract-ocr tesseract-ocr-spa \
+    && apt-get clean 
 
 # Establece el directorio de trabajo
 WORKDIR /app

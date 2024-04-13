@@ -10,3 +10,15 @@ Content-Type: image/jpeg
 
 < ./doc/factura1.jpg
 --MyBoundary--
+
+
+### Request to Enhance API
+POST {{host}}/api/enhance
+Content-Type: multipart/form-data; boundary=MyBoundary
+
+--MyBoundary
+Content-Disposition: form-data; name="file"; filename="sample_image.jpg"
+Content-Type: image/jpeg
+
+< ./doc/factura1.jpg
+--MyBoundary--

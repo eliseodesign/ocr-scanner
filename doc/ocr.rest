@@ -9,7 +9,7 @@ Content-Type: multipart/form-data; boundary=MyBoundary
 Content-Disposition: form-data; name="file"; filename="sample_image.jpg"
 Content-Type: image/jpeg
 
-< ./doc/factura1.jpg
+< {{img_path}}1.jpg
 --MyBoundary--
 
 
@@ -21,7 +21,7 @@ Content-Type: multipart/form-data; boundary=MyBoundary
 Content-Disposition: form-data; name="file"; filename="sample_image.jpg"
 Content-Type: image/jpeg
 
-< {{img_path}}5.jpg
+< {{img_path}}4.jpg
 --MyBoundary--
 
 

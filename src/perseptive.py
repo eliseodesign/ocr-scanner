@@ -30,31 +30,6 @@ def correct_perspective(image):
 
     return transformed
 
-# @auto_perspective_api.route('/auto_correct_perspective', methods=['POST'])
-# def auto_correct_perspective():
-#     file = request.files['file']
-    
-#     if not file:
-#         return jsonify({"error": "No file provided"}), 400
-
-#     # Read the image
-#     image = Image.open(file.stream)
-#     image = np.array(image)
-
-#     # Correct perspective
-#     corrected_image = correct_perspective(image)
-
-#     if corrected_image is None:
-#         return jsonify({"error": "No rectangle could be found"}), 400
-
-#     # Convert back to PIL Image to send via Flask
-#     im_pil = Image.fromarray(corrected_image)
-#     img_io = io.BytesIO()
-#     im_pil.save(img_io, 'PNG')
-#     img_io.seek(0)
-
-#     return send_file(img_io, mimetype='image/png')
-
 
 
 def four_point_transform(image, pts):

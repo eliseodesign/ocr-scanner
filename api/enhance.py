@@ -47,7 +47,7 @@ def enhance_funct():
         
         # Mejorar el contraste de la imagen
         enhancer = ImageEnhance.Contrast(image)
-        image = enhancer.enhance(1.2)  # Aumentar el contraste
+        image = enhancer.enhance(1.4)  # Aumentar el contraste
 
 
         # Volver imagen a blanco y negro
@@ -55,8 +55,8 @@ def enhance_funct():
 
         # Guardar la imagen mejorada en un buffer
         img_io = io.BytesIO()
-        image.save(img_io, 'JPEG', quality=70)
+        image.save(img_io, 'PNG', quality=70)
         img_io.seek(0)
 
         # Devolver la imagen como una respuesta
-        return send_file(img_io, mimetype='image/jpeg')
+        return send_file(img_io, mimetype='image/png')

@@ -3,4 +3,4 @@ numpy==1.19.2
 Pillow
 opencv-python==4.4.0.42
 pytesseract
-dotenv
+python-dotenv
